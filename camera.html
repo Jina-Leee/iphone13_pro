@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>about iphone 13 pro camera</title>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+		html{font-family: 'Noto Sans KR', sans-serif;}
+		body,p{margin: 0;}
+		.row{width: 800px;margin-left: calc(50vw - 400px);}
+		.black{background-color: black; width: 100vw;height: 100vh;padding-bottom: 30px;}
+		#cameraText{color: white;height: 50px;width: 800px;font-size: 2.6em;padding-top: 150px;padding-bottom: 40px;font-weight: 500;text-align: center;}
+		.flex{display: flex;}
+		.col-5{width: 400px;}
+		#cameraFunction{font-size: 1.8rem;padding-top: 10vh;word-break: keep-all;}
+		p{color: white;padding-left: 25px;}
+		.warning{color: darkgray;font-size: 0.7em;}
+		.howto{font-size: 1.2em;}
+		.abs{position: absolute;}
+		.relative{position: relative;}
+		#lens_1{/*background-color: red*/; width: 110px; height: 110px;left: 4vw;top: 10.5vh;}
+		#lens_2{/*background-color: blue*/;width: 110px; height: 110px;left: 11.5vw;top: 18vh;}
+		#lens_3{/*background-color: yellow*/;width: 110px; height: 110px;left: 4vw;top: 26vh;}
+		#img{padding-top: 20px;}
+		.warn_text{text-align: center;}
+	</style>
+</head>
+<body>
+	<section class="black">
+		<div id="cameraText" class="row"></div>
+		<div class="row warn_text">
+			<p class="howto">카메라 렌즈들을 클릭하여 성능을 확인하세요</p>
+			<p class="warning">주의 : 이 페이지는 크롬 width 100%에 최적화되어 있습니다.</p>
+		</div>
+			
+		<div class="flex row">
+			<div class="col-5" id="cameraFunction">
+				
+			</div>
+			<div class="col-5 relative">
+				
+				<img src="iphone_camera.png" id="img">
+				
+				<div class="abs" id="lens_1"> </div>
+				<div class="abs" id="lens_2"> </div>
+				<div class="abs" id="lens_3"> </div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		var camera ="사상 최대 규모의 업그레이드를 거친<br> Apple의 프로급 카메라 시스템<br> 훨씬 더 많은 디테일을 포착하는<br> 차원이 다른 하드웨어<br> 새로운 사진 및 영화 촬영 기법을 구현하는<br> 놀랄 만큼 똑똑한 소프트웨어<br> 그리고 이 모든 걸 가능하게 하는<br> 압도적으로 빠른 칩까지<br> 당신이 촬영하는 방식까지 바꿔놓을 카메라<br>";
+
+		var cameraArray = camera.split("<br>");
+		// console.log(cameraArray);
+
+
+		var myTimer = setInterval(print,950);
+		var s=0;
+
+		function print(){
+			if(s == 9){
+				cameraText.innerHTML += cameraArray[s];
+			}
+
+			else{
+			cameraText.innerHTML = null;
+			cameraText.innerHTML += cameraArray[s] + "<br>";
+			s++;
+			if(s == cameraArray.length){
+				clearInterval(myTimer);
+			}
+		}
+	}
+
+
+		function randomA(min,max){
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1 ) + min)
+		}
+
+		var text1 = "망원<br> 77mm 초점 거리<br> 3배 광학 줌<br> f/2.8 조리개<br> Focus Pixels<br> 6매(Six-element) 렌즈<br> OIS";
+		var text1Array = text1.split("<br>");
+
+		var text2 = "울트라와이드<br> 13mm 초점 거리<br> f/1.8 조리개<br> 빨라진 센서<br> Focus Pixels<br> 6매(Six-element) 렌즈";
+		var text2Array = text2.split("<br>");
+
+		var text3 = "와이드<br> 26mm 초점 거리<br> 1.9μm 픽셀<br> f/1.5 조리개<br> 100% Focus Pixels<br> 7매(Seven-element) 렌즈<br> 센서 시프트 OIS"
+		var text3Array = text3.split("<br>")
+
+
+		lens_1.onclick = function(){
+			cameraFunction.innerText = text1Array;
+			cameraFunction.style.color = "white";
+		}
+
+		lens_2.onclick = function(){
+			cameraFunction.innerText = text2Array;
+			cameraFunction.style.color = "white";
+		}
+
+		lens_3.onclick = function(){
+			cameraFunction.innerText = text3Array;
+			cameraFunction.style.color = "white";
+		}
+
+	</script>
+
+</body>
+</html>
+
+<!--  사상 최대 규모의 업그레이드를 거친 Apple의 프로급 카메라 시스템<br>
+ 훨씬 더 많은 디테일을 포착하는 차원이 다른 하드웨어<br>
+ 새로운 사진 및 영화 촬영 기법을 구현하는 놀랄 만큼 똑똑한 소프트웨어<br>
+ 그리고 이 모든 걸 가능하게 하는 압도적으로 빠른 칩까지<br>
+ 당신이 촬영하는 방식까지 바꿔놓을 카메라<br> -->
+
+<!--  망원<br>77mm 초점 거리<br>3배 광학 줌<br>f/2.8 조리개<br>Focus Pixels<br>6매(Six-element) 렌즈<br>OIS
+ -->
+<!--  울트라와이드<br>13mm 초점 거리<br>f/1.8 조리개<br>빨라진 센서<br>Focus Pixels<br>6매(Six-element) 렌즈
+
+ 와이드<<br>26mm 초점 거리<br>1.9μm 픽셀<br>f/1.5 조리개<br>100% Focus Pixels<br>7매(Seven-element) 렌즈<br>센서 시프트 OIS -->
